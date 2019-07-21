@@ -1,0 +1,7 @@
+<app-header></app-header>
+
+<div class="container">
+  <div *ngIf="message" class="notification-message" [ngStyle]="{backgroundColor: color}" @verticalSlide>{{ message }}</div>
+  <app-edit-address></app-edit-address>
+  <app-address-list></app-address-list>
+</div>

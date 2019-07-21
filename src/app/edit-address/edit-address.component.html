@@ -1,0 +1,48 @@
+<div class="row py-4">
+  <div class="col-8">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-row">
+        <div class="col-12 form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            [ngModel]="address.name"
+            #name="ngModel"
+            required>
+          <span *ngIf="name.invalid && name.touched || formRejected && name.invalid" class="help-block">Please enter a street and city name</span>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-6 form-group">
+          <label for="zip">Zip</label>
+          <input
+            type="text"
+            class="form-control"
+            name="zip"
+            [ngModel]="address.address.zip"
+            #zip="ngModel"
+            required
+            maxlength="5"
+            pattern="^ABC.*">
+          <span *ngIf="zip.invalid && zip.touched || formRejected && zip.invalid" class="help-block">Please enter a zip code starting with ABC</span>
+        </div>
+        <div class="col-6 form-group">
+          <label for="country">Country</label>
+          <select
+            name="country"
+            class="form-control"
+            [ngModel]="address.address.country"
+            #country="ngModel"
+            required>
+            <option *ngFor="let country of countries" [value]="country.name">{{country.name}}</option>
+          </select>
+          <span *ngIf="country.invalid && country.touched || formRejected && country.invalid" class="help-block">Please select a country</span>
+        </div>
+      </div>
+      <button [disabled]="f.pristine" class="btn btn-success" type="submit">{{editMode ? 'Update Address' : 'Add Address'}}</button>
+      <button class="btn btn-primary ml-2" type="button" (click)="clearForm(f)">Clear Form</button>
+    </form>
+  </div>
+</div>

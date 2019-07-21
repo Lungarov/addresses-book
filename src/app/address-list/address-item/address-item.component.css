@@ -1,0 +1,12 @@
+.card {
+  display: block;
+}
+
+.card-body {
+  background-color: #F2F6F7;
+}
+
+.card-body:hover {
+  background-color: #EAF2F6;
+  cursor: pointer;
+}

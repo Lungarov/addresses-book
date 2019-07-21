@@ -1,0 +1,12 @@
+.notification-message {
+  width: 100%;
+  height: 64px;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

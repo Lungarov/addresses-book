@@ -1,6 +1,9 @@
-# AngularAddressBook
+# AngularAddressesBook
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+
+## Getting started
+Make sure you have the Angular CLI installed globally, then run npm install to resolve all dependencies (might take a minute).
 
 ## Development server
 
